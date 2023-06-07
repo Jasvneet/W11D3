@@ -1,5 +1,5 @@
 import Home from "./Components/Home/home";
-import Survey from "./Components/Survey/survey";
+import SampleSurvey from "./Components/Survey/survey";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
     <Switch>
       <Route path="/sample-survey">
-        <Survey />
+        <SampleSurvey />
       </Route>
 
       <Route path="/">

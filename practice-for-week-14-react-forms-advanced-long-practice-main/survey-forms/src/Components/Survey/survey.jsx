@@ -1,12 +1,8 @@
 import { useState } from "react"
+import Sample from '../../_assets/sample.json'
 
-const Survey = () => {
-
-    const [user, setUser] = useState({
-        question1: "",
-        question2: "",
-        question3: "",
-    })
+const SampleSurvey = () => {
+    const [user, setUser] = useState({})
 
     const handleChange = (field) => {
         return (e) => {
@@ -19,11 +15,27 @@ const Survey = () => {
     }
     return (
     <>
-        <h1>Sample Survey</h1>
-        <form className="sample-form" onSubmit={handleSubmit}>
+        <h1>{Sample.name}</h1>
+        <p>{Sample.description}</p>
+        <p>{Sample.instructions}</p>
 
-            <div>
-            <label> Question 1:
+        <form className="sample-form" onSubmit={handleSubmit}>
+            {Sample.questions.map((question) => {
+                <h2>{question.stem}</h2>
+                 {question.type === 'mcq' ? 
+                    (question.options.map((option) => {
+                        <> 
+                        <label>{option.text} 
+                            <input type="radio" name={question.stem} value={option.value} onChange={handleChange(question.stem)}>
+                            </input>
+                        </label>
+                        </>
+                    }) : ('')
+                }
+            }
+
+            {/* <div>
+            <label> Question 1: 
                 <input type="text" name="question1" value={user.question1} onChange={handleChange('question1')}/>
             </label>
             </div>
@@ -52,7 +64,7 @@ const Survey = () => {
 
             <div>
                 <input type="submit" />
-            </div>
+            </div> */}
 
         </form>
 
@@ -61,4 +73,4 @@ const Survey = () => {
         
     )
 }
-export default Survey;
+export default SampleSurvey;
