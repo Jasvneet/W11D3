@@ -1,10 +1,15 @@
 import ReactSlider from "react-slider";
 import './Thermometer.css';
 import { useClimate } from "../../context/ClimateContext";
+import { useEffect } from "react";
 
 function Thermometer() {
 
-  const {temperature, setTemperature} = useClimate();
+  const {temperature, setTemperature, desiredTemp, setDesiredTemp} = useClimate();
+
+  useEffect(() => {
+    setTimeout()
+  },[temperature, desiredTemp]) 
   
   return (
     <section>
