@@ -1,0 +1,48 @@
+/* TODO Add site wide styles */
+
+@import "./reset.css";
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 24px;
+    border-radius: 10px;
+    height: 120%;
+    width: 200px;
+}
+
+h1 {
+    font-size: 60px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-left: 7%;
+}
+
+.logo-heading {
+    display: flex;
+   padding: 50px;
+    flex-direction: row;
+    margin-left: 10%;
+
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    padding: 80px;
+}
