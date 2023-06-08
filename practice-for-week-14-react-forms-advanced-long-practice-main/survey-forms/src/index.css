@@ -46,3 +46,19 @@ img {
 p {
     padding: 80px;
 }
+
+.sample-form {
+    flex: display;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.question-stem {
+    padding: 50px;
+}
+
+
+.sample-headings {
+    margin-left: 50px;
+    font-size: 24px;
+}
